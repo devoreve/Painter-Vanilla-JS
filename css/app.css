@@ -1,0 +1,93 @@
+/* Variables CSS */
+:root {
+    --primary-color: #3f51b5;
+    --secondary-color: #ffffff;
+    --font-color: #000000;
+}
+
+/* Reset CSS */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Styles de la barre de navigation */
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Styles de l'en-tête */
+.header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+}
+
+/* Styles du contenu */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    overflow: hidden;
+}
+
+.canvas-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles du chat */
+.chat {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    padding: 10px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles des contrôles */
+.controls {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles du footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

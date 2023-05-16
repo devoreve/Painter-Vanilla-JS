@@ -16,18 +16,39 @@
     </nav>
     <div class="container">
         <div class="content">
-            <div class="canvas-container">
-                <canvas id="drawing-canvas" width="800" height="600"></canvas>
-            </div>
+            <canvas id="drawing-canvas" width="800" height="600"></canvas>
             <div class="controls">
-                <input type="color" id="color-picker" value="#000000">
+                <div class="default-colors">
+                    <button class="color-sample black-color"></button>
+                    <button class="color-sample red-color"></button>
+                    <button class="color-sample orange-color"></button>
+                    <button class="color-sample yellow-color"></button>
+                    <button class="color-sample green-color"></button>
+                    <button class="color-sample blue-color"></button>
+                    <button class="color-sample purple-color"></button>
+                    <!-- Ajoutez d'autres boutons pour les couleurs par défaut -->
+                </div>
                 <input type="range" id="thickness-slider" min="1" max="20" value="5">
-                <button id="erase-button">Effacer</button>
+                <button id="erase-button" class="button">Effacer</button>
             </div>
         </div>
-        <div class="chat">
-            <!-- Votre contenu de chat ici -->
-        </div>
+        <section class="chat">
+            <div class="chat-message">
+                <div class="chat-info">
+                    <span class="chat-username">John Doe</span>
+                    <span class="chat-time">10:30 AM</span>
+                </div>
+                <p class="chat-text">Salut tout le monde !</p>
+            </div>
+            <div class="chat-message">
+                <div class="chat-info">
+                    <span class="chat-username">Jane Smith</span>
+                    <span class="chat-time">10:32 AM</span>
+                </div>
+                <p class="chat-text">Bonjour ! Comment ça va ?</p>
+            </div>
+            <!-- Ajoutez d'autres messages fictifs ici -->
+        </section>
     </div>
     <footer class="footer">
         <p>&copy; 2023 Paint Party. Tous droits réservés.</p>

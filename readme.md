@@ -20,6 +20,9 @@ Ce jeu utilisera les technologies suivantes :
 
 ## TODO
 
-* Ajouter la zone de chat avec un champ input et quelques données d'exemple
-* Changer la charte graphique
+* Ajouter dynamiquement les boutons de couleur
 * Refactoriser le code avec de la POO
+* Passage sur typescript
+* Mettre en place le serveur nodeJS
+* Mettre en place le chat
+* Partage du dessin à tout le monde

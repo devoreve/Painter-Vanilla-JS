@@ -1,11 +1,19 @@
 // Sélectionner les éléments interactifs
-const colorPicker = document.getElementById('color-picker');
 const thicknessSlider = document.getElementById('thickness-slider');
 const eraseButton = document.getElementById('erase-button');
+
+let colorPen = 'black';
 
 // Sélectionner l'élément canvas
 const canvas = document.getElementById('drawing-canvas');
 const context = canvas.getContext('2d');
+
+const colorSamples = document.querySelectorAll('.color-sample');
+colorSamples.forEach((sample) => {
+    sample.addEventListener('click', (event) => {
+        colorPen = getComputedStyle(event.currentTarget).getPropertyValue('background-color');
+    });
+});
 
 // Variables pour stocker la position précédente de la souris
 let isDrawing = false;
@@ -41,7 +49,7 @@ function draw(e) {
     context.beginPath();
     context.moveTo(lastX, lastY);
     context.lineTo(x, y);
-    context.strokeStyle = colorPicker.value;
+    context.strokeStyle = colorPen;
     context.lineWidth = thicknessSlider.value;
     context.stroke();
 

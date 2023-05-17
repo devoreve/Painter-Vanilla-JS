@@ -1,6 +1,9 @@
 // Sélectionner les éléments interactifs
 const thicknessSlider = document.getElementById('thickness-slider');
 const eraseButton = document.getElementById('erase-button');
+const chatForm = document.querySelector('.chat-form');
+const chatInput = document.querySelector('#chat-input');
+const chatMessages = document.querySelector('.chat-messages');
 
 let colorPen = 'black';
 
@@ -67,6 +70,26 @@ function stopDrawing() {
 function eraseCanvas() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+function sendChatMessage(e) {
+    e.preventDefault();
+
+    const html = `
+        <div class="chat-message purple-color">
+            <div class="message-header">
+                <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                <div class="message-author">Utilisateur 1</div>
+            </div>
+            <div class="message-body">
+                ${chatInput.value}
+            </div>
+        </div>
+    `;
+
+    chatMessages.innerHTML += html;
+}
+
+chatForm.addEventListener('submit', sendChatMessage);
 
 // Ajouter des événements pour détecter les mouvements de la souris
 canvas.addEventListener('mousedown', startDrawing);

@@ -14,8 +14,8 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <div class="content">
+    <main class="container">
+        <section class="canvas-container">
             <canvas id="drawing-canvas" width="800" height="600"></canvas>
             <div class="controls">
                 <div class="default-colors">
@@ -26,30 +26,101 @@
                     <button class="color-sample green-color"></button>
                     <button class="color-sample blue-color"></button>
                     <button class="color-sample purple-color"></button>
-                    <!-- Ajoutez d'autres boutons pour les couleurs par défaut -->
                 </div>
                 <input type="range" id="thickness-slider" min="1" max="20" value="5">
                 <button id="erase-button" class="button">Effacer</button>
             </div>
-        </div>
-        <section class="chat">
-            <div class="chat-message">
-                <div class="chat-info">
-                    <span class="chat-username">John Doe</span>
-                    <span class="chat-time">10:30 AM</span>
-                </div>
-                <p class="chat-text">Salut tout le monde !</p>
-            </div>
-            <div class="chat-message">
-                <div class="chat-info">
-                    <span class="chat-username">Jane Smith</span>
-                    <span class="chat-time">10:32 AM</span>
-                </div>
-                <p class="chat-text">Bonjour ! Comment ça va ?</p>
-            </div>
-            <!-- Ajoutez d'autres messages fictifs ici -->
         </section>
-    </div>
+        <section class="chat-container">
+            <div class="chat-messages">
+                <div class="chat-message blue-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mauris augue. Sed iaculis lobortis diam, vel ornare odio imperdiet ut.
+                    </div>
+                </div>
+                <div class="chat-message yellow-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 2" class="avatar">
+                        <div class="message-author">Utilisateur 2</div>
+                    </div>
+                    <div class="message-body">
+                        Sed vel ligula velit. Sed ullamcorper neque ut tincidunt tempus. Duis in nisi elit.
+                    </div>
+                </div>
+                <div class="chat-message orange-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        In rutrum ac augue a mollis. Sed vitae magna condimentum, sodales leo at, commodo lectus.
+                    </div>
+                </div>
+                <div class="chat-message green-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        In rutrum ac augue a mollis. Sed vitae magna condimentum, sodales leo at, commodo lectus.
+                    </div>
+                </div>
+                <div class="chat-message red-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        In rutrum ac augue a mollis. Sed vitae magna condimentum, sodales leo at, commodo lectus.
+                    </div>
+                </div>
+                <div class="chat-message purple-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        In rutrum ac augue a mollis. Sed vitae magna condimentum, sodales leo at, commodo lectus.
+                    </div>
+                </div>
+                <div class="chat-message purple-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        In rutrum ac augue a mollis. Sed vitae magna condimentum, sodales leo at, commodo lectus.
+                    </div>
+                </div>
+                <div class="chat-message purple-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        In rutrum ac augue a mollis. Sed vitae magna condimentum, sodales leo at, commodo lectus.
+                    </div>
+                </div>
+                <div class="chat-message purple-color">
+                    <div class="message-header">
+                        <img src="https://img.favpng.com/0/0/17/final-fantasy-fables-chocobo-tales-final-fantasy-fables-chocobo-s-dungeon-final-fantasy-ix-final-fantasy-vii-png-favpng-1Q2FPBCqWF6rGib72MRPXKpqj.jpg" alt="Avatar utilisateur 1" class="avatar">
+                        <div class="message-author">Utilisateur 1</div>
+                    </div>
+                    <div class="message-body">
+                        In rutrum ac augue a mollis. Sed vitae magna condimentum, sodales leo at, commodo lectus.
+                    </div>
+                </div>
+            </div>
+            <form class="chat-form">
+                <input id="chat-input" type="text" placeholder="Saisissez votre message...">
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
     <footer class="footer">
         <p>&copy; 2023 Paint Party. Tous droits réservés.</p>
     </footer>

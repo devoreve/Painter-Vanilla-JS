@@ -5,6 +5,10 @@
     --font-color: #000000;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* Reset CSS */
 body, html {
     height: 100%;
@@ -63,11 +67,10 @@ body, html {
 /* Styles du contenu */
 .container {
     display: flex;
-    height: 100%;
     margin: 0.5em 0.5em;
 }
 
-.content {
+.canvas-container {
     display: flex;
     flex-direction: column;
 }
@@ -113,42 +116,104 @@ body, html {
     border-radius: 50%; /* Ajoutez cette ligne pour obtenir une forme ronde */
 }
 
-.controls .black-color {
+.black-color {
     background-color: black;
 }
 
-.controls .red-color {
+.red-color {
     background-color: firebrick;
 }
 
-.controls .orange-color {
+.orange-color {
     background-color: darkorange;
 }
 
-.controls .yellow-color {
+.yellow-color {
     background-color: gold;
 }
 
-.controls .green-color {
+.green-color {
     background-color: limegreen;
 }
 
-.controls .blue-color {
+.blue-color {
     background-color: dodgerblue;
 }
 
-.controls .purple-color {
-    background-color: var(--primary-color);
+.purple-color {
+    background-color: mediumorchid;
 }
 
 /* Styles du chat */
-.chat {
+.chat-container {
     background-color: var(--secondary-color);
     color: var(--font-color);
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     overflow-y: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 100%;
+    max-height: 600px;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 80%;
+}
+
+.chat-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-form {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.chat-form input[type="text"] {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.chat-form button {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 16px;
+    margin-left: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background-color: #2c3e8e;
 }
 
 /* Styles du footer */
@@ -157,8 +222,4 @@ body, html {
     color: var(--secondary-color);
     text-align: center;
     padding: 10px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
